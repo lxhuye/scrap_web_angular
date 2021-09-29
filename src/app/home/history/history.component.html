@@ -1,0 +1,33 @@
+<div class="main">
+  <div class="cpbox" style="width: 1010px">
+    <div class="boxt">
+      <p style="width:auto;padding:0px 10px 0px 10px">{{name}}</p>
+      <font>说明：&nbsp;&nbsp;单位：元 / 吨</font>
+     
+    </div>
+    <table cellspacing="0">
+      <tr class="boxb">
+  
+        <th class="bb1">日期</th>
+        <th class="bb7">最新价格</th>
+        <th class="bb7">昨日价格</th>
+        <th class="bb4">涨跌</th>
+        
+        <th style="width: 100%">走势图</th>
+      </tr>
+      <!-- <tbody class="ibox"> -->
+        <tr class="ibox" *ngFor="let item of tableData;let i = index;">
+          <td><p class="bb1">{{item.createTime}}</p></td>
+          <td><p class="bb7 bcb {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.price}}</p></td>
+          <td><p class="bb7 bcb {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.yesterdayPrice}}</p></td>
+          <td><p class="bb4 {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.situation}}</p></td>
+          <td><p class="bcl">
+            <a [routerLink]="[ '/historypic/']" [queryParams]="{id: id, name: name}"><img src="assets/image/k.gif"></a>
+          </p></td>
+        </tr>
+      
+    </table>
+    
+  </div>
+  <app-navigation [page]="page" (pageToNum)="callBackNavigation($event)"></app-navigation>
+</div>

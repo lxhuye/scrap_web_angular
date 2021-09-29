@@ -1,0 +1,90 @@
+<div class="cpbox">
+  <div class="boxt">
+    <p>{{title}}</p>
+    <font>单位：元 / 吨</font>
+    <font style="color:red;">&nbsp;&nbsp;&nbsp;&nbsp;好铝锭，好结晶</font>
+    <a href="" title="更多">更多+</a>
+  </div>
+  <table cellspacing="0">
+    <tr class="boxb">
+      <th class="bb1">品名</th>
+      <th class="bb5">说明</th>
+      <th class="bb9">最新价格</th>
+      <th class="bb9">昨日价格</th>
+      <th class="bb4">涨跌</th>
+      <th class="bb9">日期</th>
+      <th class="bb6">走势图</th>
+      <th class="bb3">历史价格</th>
+      <th class="bb8">联系方式</th>
+    </tr>
+    <!-- <tbody class="ibox"> -->
+      <tr class="ibox" *ngFor="let item of tableData;let i = index;">
+        <td><p class="bb1">{{item.name}}</p></td>
+        <td><p class="bb5">{{item.steelExplain ? item.steelExplain : '&nbsp;'}}</p></td>
+        <td><p class="bb9 bcb {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.todayPrice}}</p></td>
+        <td><p class="bb9 bcb {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.yesterdayPrice}}</p></td>
+        <td><p class="bb4 {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.todaySituation}}</p></td>
+        <td><p class="bb9 bch">{{nowtime}}</p></td>
+        <td><p class="bb6 bcl">
+          <a [routerLink]="[ '/historypic/']" [queryParams]="{id: item.id, name: item.name}"><img src="assets/image/k.gif"></a>
+        </p></td>
+        <td><p class="bb3">
+          <a [routerLink]="[ '/history/']" [queryParams]="{id: item.id, name: item.name}" title="点击查看ADC12历史价格">历史价格</a>
+        </p></td>
+        <td><p class="iblx">{{item.phone}}</p></td>
+      </tr>
+    <!-- </tbody> -->
+    
+  </table>
+  <!-- <div class="boxb">
+    <p class="bb1">品名</p>
+    <p class="bb5">说明</p>
+    <p class="bb9">最新价格</p>
+    <p class="bb9">昨日价格</p>
+    <p class="bb4">涨跌</p>
+    <p class="bb9">日期</p>
+    <p class="bb6">走势图</p>
+    <p class="bb3">历史价格</p>
+    <p class="bb8" style="float:right;">联系方式</p>
+  </div>
+  <div class="ibox">
+    <li class="ibpx" *ngFor="let item of tableData;let i = index;">
+      <p class="bb1">{{item.name}}</p>
+      <p class="bb5">{{item.steelExplain ? item.steelExplain : '&nbsp;'}}</p>
+      <p class="bb9 bcb {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.todayPrice}}</p>
+      <p class="bb9 bcb {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.yesterdayPrice}}</p>
+      <p class="bb4 {{item.type == 1 ? 'bcg' : item.type == 2 ? 'bcr' : 'bch'}}">{{item.todaySituation}}</p>
+      <p class="bb9 bch">2021-01-19</p>
+      <p class="bb6 bcl">
+        <img src="../../../assets/image/k.gif">
+      </p>
+      <p class="bb3">
+        <a href="" title="点击查看ADC12历史价格">历史价格</a>
+      </p>
+      <p class="bb8" style="float:right;">{{item.phone}}</p>
+    </li>
+    <li class="iblx">电话：0701-5386189<br>
+      吴学兵经理：15107017888<br>
+      胡志斌经理：15207017999<br>
+      万利娥经理：15207017866<br>
+      姜伏玲经理：18707015318<br>
+      祝梦飞经理：15207017888<br>
+      危军培经理：18807018969<br>
+      孙进忠经理：18707010988<br>
+      段海维经理：18170150739<br></li>
+    <li class="ibpx">
+      <p class="bb1">国标铝棒</p>
+      <p class="bb5">&nbsp;&nbsp;</p>
+      <p class="bb9 bcb bcg">13920</p>
+      <p class="bb9 bcb bcg">14160</p>
+      <p class="bb4 bcg">-240</p>
+      <p class="bb9 bch">2021-01-19</p>
+      <p class="bb6 bcl">
+        <img src="../../../assets/image/k.gif">
+      </p>
+      <p class="bb3">
+        <a href="" title="点击查看ADC12历史价格">历史价格</a>
+      </p>
+    </li>
+  </div> -->
+</div>

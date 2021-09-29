@@ -1,0 +1,142 @@
+<div>
+  <div class="banner_hint block100">
+    <div class="block1000">
+      <div class="banner_keywd floatL">
+        <strong class="fontwB">关键词：</strong>
+        <span id="commonHeaderkeywords">
+          <a href="" target="_blank" title="ADC12，T2铜排，铝合金锭，铝型材，铜棒">ADC12，T2铜排，铝合金锭，铝型材，铜棒</a>
+        </span>
+      </div>
+      <div class="banner_search floatR">
+        <input class="textInput floatL" placeholder="请输入搜索关键字" />
+        <input type="submit" value="" class="submitInput floatR fontwB">
+      </div>
+    </div>
+  </div>
+  <div class="module m1">
+    <div class="block1000Index m1_wrap">
+      <h3>价格公开透明，赢得客户信任！</h3>
+
+      <div class="cpbj">
+        <app-table-bar *ngFor="let item of typeList;let i = index" [type]="item.name" [status]="item.id"></app-table-bar>
+        <!-- <app-table-bar [type]="'铜材销售价格'" [status]="2"></app-table-bar>
+        <app-table-bar [type]="'铝型材销售价格'" [status]="3"></app-table-bar>
+        <app-table-bar [type]="'废旧金属收购价格'" [status]="4"></app-table-bar>
+        <app-table-bar [type]="'废钢铁收购价格'" [status]="5"></app-table-bar> -->
+      </div>
+    </div>
+  </div>
+  <div class="module module1">
+    <div class="block1000 m1center"></div>
+  </div>
+
+
+  <div class="m5line"></div>
+
+  <div class="guanggao" title="凯锌达实业集团-凯锌达实业有色金属集团有限公司">
+    <img src="assets/image/2020229120143.jpg" alt="">
+  </div>
+
+  <div class="module module7">
+    <div class="block1000">
+      <div class="m7cont_wrap">
+        <div class="module7left floatL">
+          <div class="module7mainL">
+            <div class="module7mainLtitle">
+              <h5>走进凯锌达</h5>
+              <small>ABOUT US</small>
+            </div>
+            <div class="module7contL_wrap">
+              <ul id="module7contL_UL">
+                <li>
+                  <div class="module7contL">
+                    <div class="module7contL1img">
+                      <div class="tc mt5">
+                        <iframe height="213" width="316" src="http://player.youku.com/embed/XMjMyMTU2Nzg0"
+                          frameborder="0" allowfullscreen=""></iframe>
+                      </div>
+                    </div>
+                    <div class="module7contL1">
+                      <h3>凯锌达实业-凯锌达实业有色金属集团有限公司</h3>
+                      <p>
+                        {{content}}
+                        <a title="走进凯锌达" href="javascript:void(0);" style="color:#36F">[查看更多]</a>
+                      </p>
+
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="module7mainR">
+            <div class="module7mainRtitle">
+              <h3>凯锌达实业荣誉资质</h3>
+              <small>HONOR</small>
+            </div>
+            <div class="module7maincont">
+              <div class="module7maincontUl_wrap">
+                <swiper [slidesPerView]="1" [loop]="true" [spaceBetween]="10" [autoplay]="{ draggable: true }" [virtual]="{}" [navigation]="true">
+                  <ng-container *ngFor="let slide of slides; index as i">
+                    <ng-template swiperSlide>
+                      <img [src]="slide.img" alt="" width="100%">
+                      <h2 class="textC">{{slide.name}}</h2>
+                    </ng-template>
+                  </ng-container>
+                </swiper>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="m7UL">
+          <swiper [slidesPerView]="5" [loop]="true" [spaceBetween]="10" [autoplay]="{ draggable: true }" [virtual]="{}" [navigation]="true">
+            <ng-container *ngFor="let slide of slidesList; index as i">
+              <ng-template swiperSlide>
+                <img [src]="slide" alt="" width="100%">
+              </ng-template>
+            </ng-container>
+          </swiper>
+        </div>
+      </div>
+    </div>
+
+    <div class="module module8">
+      <div class="module8main">
+        <div class="block1000">
+          <div class="module8L">
+            <div class="module8Ltitle">
+              <a href="" title="凯锌达动态" class="floatR">更多+</a>
+              <h2>凯锌达动态</h2>
+              <em>Baotai News</em>
+            </div>
+            <div class="module8Lcont">
+              <ul>
+                <li *ngFor="let item of newsList;let i = index">
+                  <a href="javascript:void(0);" title="{{item.name}}">{{item.name}}
+                    <font style="color:#999;float:right;">{{item.time}}</font>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Link">
+      <div class="block1000">
+        <div class="Linktitle">
+          <h3>友情链接<small>/LINKS</small></h3>
+        </div>
+        <ul>
+          <li *ngFor="let item of linkList;let i = index">
+            <a href="{{item.url}}" title="{{item.name}}" target="_blank">{{item.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,31 @@
+<div class="header">
+  <div class="top">
+    <div class="block1000">
+      <strong class="disB floatL">欢迎光临凯锌达实业-凯锌达实业有色金属集团有限公司！</strong>
+      <div class="top_list floatR"> <a title="中文"><img src="assets/image/cn.jpg">
+          中文</a><span>|</span><a title="English"><img src="assets/image/en.jpg"> English</a><span>|</span><a
+          href="javascript:void(0);" title="收藏凯锌达实业">收藏凯锌达实业</a><span>|</span><a>在线留言 </a></div>
+    </div>
+  </div>
+  <div class="block1000">
+    <div class="logomain floatL">
+      <div class="logo floatL"><a href="" title="凯锌达实业-凯锌达实业有色金属集团有限公司"><img src="assets/image/logo.png"
+            alt="凯锌达实业-凯锌达实业有色金属集团有限公司" title="凯锌达实业-凯锌达实业有色金属集团有限公司"></a></div>
+      <h1 class="logotext floatL"><strong>保质立信，太业定兴</strong><small>质量是产品的灵魂，信用是人的灵魂</small></h1>
+    </div>
+    <div class="top_tel floatR">
+      <small>——全国服务热线——</small><em>0701-5382189</em>
+    </div>
+    <div class="top_tel floatR" style="background: none;width: 60px;padding-left:0px;margin-right:20px;"><img
+        src="assets/image/code.jpg"><br>扫一扫</div>
+  </div>
+  <div class="navigation block100">
+    <ul class="nav block1000" id="navs">
+      <li *ngFor="let item of navList;let i = index" class="navs_lishw" id="">
+        <span class="v">
+          <a [routerLink]="[item.url]" title="{{item.name}}" class="{{navNum == i ? 'sele' : ''}}">{{item.name}}</a>
+        </span>
+      </li>
+    </ul>
+  </div>
+</div>

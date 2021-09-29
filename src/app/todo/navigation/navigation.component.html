@@ -1,0 +1,20 @@
+<div class="pr_page" style="float:right;margin-right:30px;">
+  <li class="pageszi">共 <b>{{pageNum.total}}</b> 条信息&nbsp;&nbsp;<b>{{pageNum.pageSize}}</b>条/页&nbsp;&nbsp;共
+    <b>{{pageNum.totalPageNum}}</b> 页
+  </li>
+  <li *ngIf="pageNum.currnetPage > 1"><a href="javascript: void(0);" (click)="MM_jumpMenu(1)">首页</a></li>
+  <li *ngIf="pageNum.currnetPage > 1"><a href="javascript: void(0);" (click)="prePage(pageNum.currnetPage)">上一页</a></li>
+
+  <li *ngIf="pageNum.currnetPage > 1"><a href="javascript: void(0);" (click)="MM_jumpMenu(pageNum.currnetPage - 1)">{{pageNum.currnetPage - 1}}</a></li>
+  <li><a href="javascript: void(0);" (click)="MM_jumpMenu(pageNum.currnetPage)">{{pageNum.currnetPage}}</a></li>
+  <li *ngIf="pageNum.currnetPage < pageNum.totalPageNum"><a href="javascript: void(0);" (click)="MM_jumpMenu(pageNum.currnetPage+1)">{{pageNum.currnetPage + 1}}</a></li>
+
+  <li *ngIf="pageNum.currnetPage < pageNum.totalPageNum"><a href="javascript: void(0);" (click)="nextPage(pageNum.currnetPage)">下一页</a></li>
+  <li *ngIf="pageNum.currnetPage < pageNum.totalPageNum"><a href="javascript: void(0);" (click)="MM_jumpMenu(pageNum.totalPageNum)">末页</a></li>
+  <li>
+    转到：
+    <select name="page" id="page" class="keycss" [value]="pageNum.currnetPage" (change)="MM_jumpMenu($event.target.value)">
+      <option *ngFor="let item of [].constructor(pageNum.totalPageNum);let index=index" value="{{index + 1}}">{{index + 1}}</option>
+    </select>页
+  </li>
+</div>
