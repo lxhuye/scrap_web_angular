@@ -11,7 +11,7 @@ export class TodoFooterComponent implements OnInit {
 
   public navList: Array<Object> = [
     {
-      name: '凯锌达首页',
+      name: 'XXX首页',
       url: ''
     },
     {

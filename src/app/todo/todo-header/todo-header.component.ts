@@ -14,11 +14,11 @@ export class TodoHeaderComponent implements OnInit {
 
   public navList: Array<Object> = [
     {
-      name: '凯锌达首页',
+      name: 'XXX首页',
       url: '/'
     },
     {
-      name: '关于凯锌达',
+      name: '关于XXX',
       url: ''
     },
     {
